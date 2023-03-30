@@ -9,94 +9,14 @@
 
     <div class="btns-slider">
       <div class="btns">
-        <button
-          class="btn color-one"
-          (click)="addStyle(['color', 'color-one'])"
-        >
-          color 1
-        </button>
-        <button class="btn neon-one" (click)="addStyle(['neon', 'neon-one'])">
-          neon 1
-        </button>
-
-        <button
-          class="btn color-two"
-          (click)="addStyle(['color', 'color-two'])"
-        >
-          color 2
-        </button>
-        <button class="btn neon-two" (click)="addStyle(['neon', 'neon-two'])">
-          neon 2
-        </button>
-
-        <button
-          class="btn btn-color"
-          (click)="addStyle(['color', 'color-three'])"
-        >
-          color 3
-        </button>
-        <button
-          class="btn neon-three"
-          (click)="addStyle(['neon', 'neon-three'])"
-        >
-          neon 3
-        </button>
-
-        <button
-          class="btn btn-color"
-          (click)="addStyle(['color', 'color-four'])"
-        >
-          color 4
-        </button>
-        <button class="btn neon-four" (click)="addStyle(['neon', 'neon-four'])">
-          neon 4
-        </button>
-
-        <button
-          class="btn btn-color"
-          (click)="addStyle(['color', 'color-five'])"
-        >
-          color 5
-        </button>
-        <button class="btn neon-five" (click)="addStyle(['neon', 'neon-five'])">
-          neon 5
-        </button>
-
-        <button
-          class="btn btn-color"
-          (click)="addStyle(['color', 'color-six'])"
-        >
-          color 6
-        </button>
-        <button class="btn neon-six" (click)="addStyle(['neon', 'neon-six'])">
-          neon 6
-        </button>
-
-        <button
-          class="btn btn-color"
-          (click)="addStyle(['color', 'color-seven'])"
-        >
-          color 7
-        </button>
-        <button
-          class="btn neon-seven"
-          (click)="addStyle(['neon', 'neon-seven'])"
-        >
-          neon 7
-        </button>
-
-        <button
-          class="btn btn-color"
-          (click)="addStyle(['color', 'color-eight'])"
-        >
-          color 8
-        </button>
-        <button
-          class="btn neon-eight"
-          (click)="addStyle(['neon', 'neon-eight'])"
-        >
-          neon 8
-        </button>
+        <div *ngFor="let button of buttons">
+          <button
+            [class]="button.buttonsClassList"
+            (click)="addStyle(button.textClassList)"
+          >
+            {{ button.buttonText }}
+          </button>
+        </div>
       </div>
 
       <div class="slider">
