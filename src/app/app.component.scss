@@ -1,0 +1,295 @@
+@import url("https://fonts.cdnfonts.com/css/gruppo");
+@import url("https://fonts.cdnfonts.com/css/bad-script");
+@import url("https://fonts.cdnfonts.com/css/kumar-one");
+@import url("https://fonts.cdnfonts.com/css/sriracha");
+@import url("https://fonts.cdnfonts.com/css/yellowtail");
+@import url("https://fonts.cdnfonts.com/css/monoton");
+
+// Active
+// Part 1
+.common.active {
+  display: grid;
+  grid-template-columns: 25vw 75vw;
+  width: 100vw;
+  height: 100vh;
+
+  // Part 2
+  .menu {
+    display: grid;
+    grid-template-rows: 15% 85%;
+  }
+
+  // Part 3
+  .input-btn-back {
+    display: grid;
+    grid-template-columns: 35% 35% 25%;
+    grid-gap: 2.5%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin-top: 4em;
+  }
+
+  // Part 3.1
+  .input {
+    grid-column: span 2;
+    width: 150px;
+    height: 75px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+  }
+
+  // part 4
+  .btns-slider {
+    display: grid;
+    grid-template-columns: 70% 25%;
+    grid-gap: 5%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  // Part 4.1
+  .btns {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+  }
+
+  .btn {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    font-style: large;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+  }
+
+  .btn-color {
+    background-color: purple;
+    color: #ffffff;
+  }
+}
+
+img {
+  width: 2vw;
+  height: 2vh;
+}
+
+// Replace Active
+.common:not(.active) {
+  display: grid;
+  grid-template-columns: 10vw 90vw;
+  width: 100vw;
+  height: 100vh;
+
+  .menu {
+    display: grid;
+    grid-template-rows: 15% 85%;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .wrap-unwrap {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    background-color: inherit;
+    margin-top: 4em;
+  }
+
+  .btns,
+  .btn-clor,
+  .input {
+    display: none;
+  }
+}
+
+.line {
+  height: 65vh;
+  border-left: 1px solid #ffffff;
+}
+
+.output {
+  width: 100%;
+  height: 100vh;
+  font-size: 15rem;
+  text-align: center;
+  color: #fef3c7;
+  line-height: 90vh;
+}
+
+input,
+button {
+  padding: 0;
+}
+
+input:focus-visible,
+button:focus-visible {
+  outline: none;
+}
+
+// Styles Color
+.color {
+  width: inherit;
+  height: inherit;
+  font-size: inherit;
+  text-align: inherit;
+
+  line-height: 90vh;
+}
+
+.btn.color-one {
+  text-shadow: 1px 1px 0px #eb452b, 2px 2px 0px #efa032, 3px 3px 0px #46b59b,
+    4px 4px 0px #017e7f, 5px 5px 0px #052939, 6px 6px 0px #c11a2b;
+}
+
+.color-one {
+  color: #fcedd8;
+  background: #d52e3f;
+  font-family: "Niconne", cursive;
+  font-weight: 700;
+  text-shadow: 5px 5px 0px #eb452b, 10px 10px 0px #efa032, 15px 15px 0px #46b59b,
+    20px 20px 0px #017e7f, 25px 25px 0px #052939, 30px 30px 0px #c11a2b,
+    35px 35px 0px #c11a2b, 40px 40px 0px #c11a2b, 45px 45px 0px #c11a2b;
+}
+
+.btn.color-two {
+  $stroke: #111827;
+  $shadow: #db2777;
+  text-shadow: -1px 0 $stroke, 0 -1px $stroke, 1px 0 $stroke, 0 1px $stroke,
+    1px 1px $stroke, -1px -1px $stroke, -1px 1px $stroke, 1px -1px $stroke,
+    3px 3px $shadow;
+}
+
+.color-two {
+  $stroke: #111827;
+  $shadow: #db2777;
+  color: #fef3c7;
+  background-color: #fef3c7;
+
+  text-shadow: -2px 0 $stroke, 0 -2px $stroke, 2px 0 $stroke, 0 2px $stroke,
+    2px 2px $stroke, -2px -2px $stroke, -2px 2px $stroke, 2px -2px $stroke,
+    6px 6px $shadow;
+}
+
+// Styles Neon
+.neon {
+  width: inherit;
+  height: inherit;
+  font-size: inherit;
+  text-align: inherit;
+  background-color: inherit;
+
+  line-height: 90vh;
+
+  --interval: 5s;
+
+  display: block;
+  text-shadow: 0 0 10px var(--color1), 0 0 20px var(--color2),
+    0 0 40px var(--color3), 0 0 80px var(--color4);
+  will-change: filter, color;
+  filter: saturate(60%);
+  animation: flicker steps(100) var(--interval) 5s infinite;
+}
+
+.neon-one {
+  color: yellow;
+  --color1: goldenrod;
+  --color2: orangered;
+  --color3: mediumblue;
+  --color4: purple;
+  font-family: Gruppo;
+}
+
+.neon-two {
+  color: lightpink;
+  --color1: pink;
+  --color2: orangered;
+  --color3: red;
+  --color4: magenta;
+  font-family: Bad Script;
+}
+
+.neon-three {
+  color: lightyellow;
+  --color1: yellow;
+  --color2: lime;
+  --color3: green;
+  --color4: mediumblue;
+  font-family: Kumar One;
+}
+
+.neon-four {
+  color: azure;
+  --color1: azure;
+  --color2: aqua;
+  --color3: dodgerblue;
+  --color4: blue;
+  font-family: Sriracha;
+}
+
+.neon-five {
+  color: tomato;
+  --color1: orangered;
+  --color2: firebrick;
+  --color3: maroon;
+  --color4: darkred;
+  font-family: Yellowtail;
+}
+
+.neon-six {
+  color: lightyellow;
+  --color1: yellow;
+  --color2: orange;
+  --color3: brown;
+  --color4: purple;
+  font-family: Bad Script;
+}
+
+.neon-seven {
+  color: yellow;
+  --color1: yellow;
+  --color2: lime;
+  --color3: green;
+  --color4: darkgreen;
+  font-family: Monoton;
+}
+
+.neon-eight {
+  color: lightyellow;
+  --color1: yellow;
+  --color2: gold;
+  --color3: orange;
+  --color4: darkred;
+  font-family: Sriracha;
+}
+
+@keyframes flicker {
+  50% {
+    color: white;
+    filter: saturate(200%) hue-rotate(20deg);
+  }
+}
+
+//Styles Font
+.font {
+  width: inherit;
+  height: inherit;
+  background-color: inherit;
+
+  text-align: left;
+
+  overflow: hidden;
+  font-size: 2rem;
+}
+
+.font-one {
+  color: azure;
+  font-family: Monoton;
+}
