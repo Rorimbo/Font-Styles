@@ -20,7 +20,15 @@
       </div>
 
       <div class="slider">
-        <div class="line"></div>
+        <input
+          [(ngModel)]="size"
+          (change)="sizeFont()"
+          type="range"
+          min="1"
+          max="20"
+          step="1"
+          class="input-slider"
+        />
       </div>
     </div>
   </div>
